@@ -26,4 +26,21 @@ grep ^chr10 gencode.v17.annotation.gtf> chr10.gff
 ### Flux Simulator
 
 1. Download [Flux Simulator](http://artifactory.sammeth.net/artifactory/barna/barna/barna.simulator/1.2.1/flux-simulator-1.2.1.tgz)
-2. 
+2. Go to `bin`, create a file called `myParameters.par` and copy the following lines:
+```
+REF_FILE_NAME   chr10.gff
+GEN_DIR         /Users/sarael-metwally/Genome
+
+NB_MOLECULES    5000000
+READ_NUMBER     5000000
+
+READ_LENGTH     100
+
+PAIRED_END      YES
+# use default 76-bp error model
+ERR_FILE        76
+
+# create a fastq file
+FASTA           YES
+
+```
