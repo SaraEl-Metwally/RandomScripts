@@ -64,3 +64,9 @@ bash flux-simulator -x -l -s -p myParameters.par
 tar zxvf jellyfish-2.2.7.tar.gz -C /Users/sarael-metwally
 ```
 3. Go to `bin` folder in `jellyfish-2.2.7` and copy the sequencing reads file called `RNA.fastq` there. 
+4. Run `jellyfish` using the following two commands: 
+```
+jellyfish count -m 21 -s 100M -t 10 -C RNA.fastq
+jellyfish dump mer_counts.jf > kmer_counts.fa
+```
+5. The resulted kmers counting file is called `kmer_counts.fa`
