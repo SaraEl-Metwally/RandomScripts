@@ -139,8 +139,22 @@ LightTrimmer accepts multiple input files of the sequencing reads given in ***fa
 #### Outputs
 The output of LightTrimmer till now is the set of the following files:
 
-```kmers_prob.txt [Comma delimeted file for kmers probability]```
-```kmers_count.txt [Comma delimeted file for kmers count]```
-```kmers_correct.txt [Comma delimeted file for kmers position and correctness (position,(0|1), 0: error, 1:correct]```
+```kmers_prob.txt [Comma delimeted file for kmers probability].
+   kmers_count.txt [Comma delimeted file for kmers count].
+   kmers_correct.txt [Comma delimeted file for kmers position and correctness (position,(0|1), 0: error, 1:correct].
+   kmers_info_all.txt [ Spaces delimited file for all information extracted from the reads.
+  
+   ```
+```
+R  K   C   M      P        Co  Ca
+1  0  19  45  1.0237e-05   1   1
+1  1  21  45  5.31115e-05  1   1
+1  2  19  45  1.0237e-05   1   1
+1  3  21  45  5.31115e-05  1   1
+1  4  21  45  5.31115e-05  1   1
+1  5  21  45  5.31115e-05  1   1
+1  6  21  45  5.31115e-05  1   1
+1  7  22  45  0.000112905  1   1
+1  8  22  45  0.000112905  1   1
 
-
+```
