@@ -146,3 +146,36 @@ R  K   C   M      P        Co  Ca
 1  8  22  45  0.000112905  1   1
 
 ```
+#### Plot kmers probability for one read
+1. Open R, and On R shell, write the following:
+```
+df <-read.csv("/Users/sarael-metwally/Documents/LightTrimmer/kmers_prob.txt",check.names=FALSE,header=FALSE)
+y <-subset(df, select=V1:V80)
+x <-(1:80)
+jpeg("/Users/sarael-metwally/Documents/RNA-seq/images/first_read_kmers_prob");
+plot(x,y[1,],type="l",xlab="kmers start positions",ylab="kmers probability",main="kmers probability for one read")
+dev.off()
+```
+2. The path provided to `read.csv` is the path to the comma delimited file for `kmers_prob.txt` from LightTrimmer.
+3. `y[1,]` means you are working on the kmers from `readID 1`. 
+4. The path provided to `jpeg` is the path you wish to store your plots.
+
+#### Plot kmers count for one read
+1. Open R, and On R shell, write the following:
+```
+df <-read.csv("/Users/sarael-metwally/Documents/LightTrimmer/kmers_count.txt",check.names=FALSE,header=FALSE)
+y <-subset(df, select=V1:V80)
+x <-(1:80)
+jpeg("/Users/sarael-metwally/Documents/RNA-seq/images/first_read_kmers_count");
+plot(x,y[1,],type="l",xlab="kmers start positions",ylab="kmers counts",main="kmers counts for one read")
+dev.off()
+```
+2. The path provided to `read.csv` is the path to the comma delimited file for `kmers_count.txt` from LightTrimmer.
+3. `y[1,]` means you are working on the kmers from `readID 1`. 
+4. The path provided to `jpeg` is the path you wish to store your plots.
+5. You can change the `plot` by providing limits on `y-axis`,i.e. the maximum value on `y axis is 300`, using the following command: 
+```
+plot(x,y[2,],ylim=c(1,300),type="l",xlab="kmers start positions",ylab="kmers counts",main="kmers counts for one read")
+```
+
+
