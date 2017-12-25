@@ -45,3 +45,12 @@ FASTA           YES
 
 ```
 3. Do not forget to put `chr10.gff` in `bin` folder of Flux simulator and change the path of `GEN_DIR` parameter in `myParameters.par` file to the folder that has `chr10.fa` 
+
+4. Use the following command to run `Flux` Simulator 
+```
+bash flux-simulator -p myParameters.par
+```
+or 
+```
+bash flux-simulator -x -l -s -p myParameters.par
+```
