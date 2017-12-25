@@ -115,29 +115,15 @@ head -n 200 sorted_kmers > top_200_kmers
 #### Installation 
 1. Clone the [GitHub repo](https://github.com/SaraEl-Metwally/LightTrimmer), e.g. with `git clone https://github.com/SaraEl-Metwally/LightTrimmer.git`
 2. Run `make` in the repo directory for **k <= 31**  or `make k=kmersize` for **k > 31**, e.g. `make k=49`.
-
-#### Quick usage guide
+3. Copy the resulted Jellyfish kmers count file `kmer_counts.fa` in LightTrimmer directory or provide it's path to the program.
+4. Copy the resulted Flux simulated sequencing reads `RNA.fastq`in LightTrimmer directory or provide it's path to the program.  
+5. Run the following command:  
 ``` 
-./LightTrimmer -k [kmer size] -g [gap size] -c [kmers counting file] -t [threads] -o [output prefix] [input files] --verbose 
+./LightTrimmer -k 21 -c kmer_counts.fa RNA.fastq --verbose 
 
 ``` 
-
-``` 
-* [-k] kmer size                [default: 31]
-* [-g] gap size                 [default: 1]
-* [-c] kmers counting file      [default: JellyFish format]
-* [-t] number of threads        [default: 1]
-* [-o] output prefix file name  [default: LightTrimmer]
-``` 
-#### Notes
-- The maximum read length for this version is ``` 1024 bp```.
-- The maximum supported read files for this version is ```100``` files.
-
-#### Read files 
-LightTrimmer accepts multiple input files of the sequencing reads given in ***fasta/fastq*** format. Also, LightTrimmer can read directly the input files compressed with gzip ***fasta.gz/fastq.gz***.
-
 #### Outputs
-The output of LightTrimmer till now is the set of the following files:
+The output of LightTrimmer is the set of the following files:
 
 ```kmers_prob.txt [Comma delimeted file for kmers probability].
    kmers_count.txt [Comma delimeted file for kmers count].
