@@ -54,3 +54,4 @@ or
 ```
 bash flux-simulator -x -l -s -p myParameters.par
 ```
+5. You will find three files in `bin` folder: `RNA.bed`, `RNA.lib`, `RNA.fastq`
