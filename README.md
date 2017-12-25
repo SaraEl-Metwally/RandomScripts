@@ -128,7 +128,7 @@ The output of LightTrimmer is the set of the following files:
 ```
 kmers_prob.txt [Comma delimeted file for kmers probability].
 kmers_count.txt [Comma delimeted file for kmers count].
-kmers_correct.txt [Comma delimeted file for kmers position and correctness (position,(0|1), 0: error, 1:correct].
+kmers_correct.txt [Comma delimeted file for kmers position and correctness (position,1 or 0)].
 kmers_info_all.txt [ Spaces delimited file for all information extracted from the reads.
   
 ```
