@@ -56,6 +56,18 @@ bash flux-simulator -x -l -s -p myParameters.par
 ```
 5. You will find three files in `bin` folder: `RNA.bed`, `RNA.lib`, `RNA.fastq`
 
+## Find the Longest PolyAs or PolyTs in a Reference Transcriptome
+1. Download a reference transcriptome file for human genome from Genecode release 17 (ftp://ftp.sanger.ac.uk/pub/gencode/Gencode_human/release_17/gencode.v17.pc_transcripts.fa.gz)
+
+
+
+
+
+
+
+
+
+
 ## RNA-Seq kmers counting 
 ### kmers counting program Jellyfish
 1. Download [Jellyfish](https://github.com/gmarcais/Jellyfish/releases/download/v2.2.7/jellyfish-2.2.7.tar.gz)
