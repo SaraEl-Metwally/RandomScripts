@@ -8,8 +8,10 @@ Random coded scripts for RNA-Seq Simulation and Analysis.
 3. To download chromosomes file for human genome, Genecode, release 17 (ftp://ftp.sanger.ac.uk/pub/gencode/Gencode_human/release_17/gencode.v17.annotation.gtf.gz).
 
 ### Preparing Data Set
-1. To extract one chromosome, i.e. chr10 from genome file GRCh37.p11.genome.fa, use the following bash command, the resulting chromosome file is chr10.fa
+1. To extract one chromosome, i.e. `chr10` from genome file `GRCh37.p11.genome.fa`, use the following bash command, the resulting chromosome file is `chr10.fa`:
 
-
+```
+perl -ne 'if(/^>(\S+)/){$c=grep{/^$1$/}qw(chr10)}print if $c' GRCh37.p11.genome.fa > chr10.fa
+```
 
 
