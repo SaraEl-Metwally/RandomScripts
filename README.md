@@ -55,3 +55,8 @@ or
 bash flux-simulator -x -l -s -p myParameters.par
 ```
 5. You will find three files in `bin` folder: `RNA.bed`, `RNA.lib`, `RNA.fastq`
+
+## RNA-Seq kmers counting 
+### kmers counting program Jellyfish
+1. Download [Jellyfish](https://github.com/gmarcais/Jellyfish/releases/download/v2.2.7/jellyfish-2.2.7.tar.gz)
+
