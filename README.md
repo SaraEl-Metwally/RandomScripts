@@ -59,7 +59,8 @@ bash flux-simulator -x -l -s -p myParameters.par
 ## RNA-Seq kmers counting 
 ### kmers counting program Jellyfish
 1. Download [Jellyfish](https://github.com/gmarcais/Jellyfish/releases/download/v2.2.7/jellyfish-2.2.7.tar.gz)
-2. unzip `jellyfish-2.2.7.tar.gz` using `tar` command and change the path to your desired extracted path: 
+2. Unzip `jellyfish-2.2.7.tar.gz` using `tar` command and change the path to your desired extracted path: 
 ```
 tar zxvf jellyfish-2.2.7.tar.gz -C /Users/sarael-metwally
 ```
+3. Go to `bin` folder in `jellyfish-2.2.7` and copy the sequencing reads file called `RNA.fastq` there. 
