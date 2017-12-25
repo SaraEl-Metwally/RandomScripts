@@ -70,3 +70,11 @@ jellyfish count -m 21 -s 100M -t 10 -C RNA.fastq
 jellyfish dump mer_counts.jf > kmer_counts.fa
 ```
 5. The resulted kmers counting file is called `kmer_counts.fa`
+6. To get most highly 200 abundant kmers, using the following commands in order:
+
+```
+jellyfish dump -c mer_counts.jf > kmer_counts.fa 
+sort -k 2 -n  -r  kmer_counts_1.fa > sorted_kmers
+head -n 200 sorted_kmers > top_200_kmers 
+```
+7. The most top 200 kmers will be in file called `top_200_kmers`  
