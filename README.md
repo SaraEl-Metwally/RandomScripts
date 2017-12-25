@@ -132,7 +132,7 @@ kmers_correct.txt [Comma delimeted file for kmers position and correctness (posi
 kmers_info_all.txt [ Spaces delimited file for all information extracted from the reads.
   
 ```
- The output file `kmers_info_all.txt` has 6 columns, which are `read ID`, `Kmer ID or position in the read`, `Actual kmer count`, `Median kmer`, `Kmer probability`, `Kmer Correct(1)/Incorrect(0)`, `Probability Computed(1)/Deductive(0)` i.e. computed based on median kmer coverage.     
+ The output file `kmers_info_all.txt` has 6 columns, which are `read ID (R)`, `Kmer ID or position in the read (K)`, `Actual kmer count (C)`, `Median kmer (M)`, `Kmer probability (P)`, `Kmer Correct(1)/Incorrect(0) (Co)`, `Probability Computed(1)/Deductive(0) (Ca)` i.e. computed based on median kmer coverage.     
 ```
 R  K   C   M      P        Co  Ca
 1  0  19  45  1.0237e-05   1   1
