@@ -23,4 +23,7 @@ or
 grep ^chr10 gencode.v17.annotation.gtf> chr10.gff
 ```
 
+### Flux Simulator
 
+1. Download [Flux Simulator](http://artifactory.sammeth.net/artifactory/barna/barna/barna.simulator/1.2.1/flux-simulator-1.2.1.tgz)
+2. 
