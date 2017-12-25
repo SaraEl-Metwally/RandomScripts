@@ -15,4 +15,12 @@ perl -ne 'if(/^>(\S+)/){$c=grep{/^$1$/}qw(chr10)}print if $c' GRCh37.p11.genome.
 ```
 2. To extract one chromosome annotation, i.e. `chr10` from genome annotation file `gencode.v17.annotation.gtf `, use the following bash command, the resulting annotation file is `chr10.gff`:  
 
+```
+grep chr10 gencode.v17.annotation.gtf > chr10.gff
+```
+or
+```
+grep ^chr10 gencode.v17.annotation.gtf> chr10.gff
+```
+
 
