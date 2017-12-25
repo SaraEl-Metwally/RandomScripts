@@ -65,6 +65,19 @@ bash flux-simulator -x -l -s -p myParameters.par
 ## Find the Longest PolyAs or PolyTs in a Reference Transcriptome
 1. Download a reference transcriptome file for human genome from Genecode release 17 (ftp://ftp.sanger.ac.uk/pub/gencode/Gencode_human/release_17/gencode.v17.pc_transcripts.fa.gz)
 
+2. Unzip the files using:
+```
+gzip -d gencode.v17.pc_transcripts.fa.gz
+
+```
+3. Run the following bash commands on the reference transcriptome file `gencode.v17.pc_transcripts.fa` to find the top 10 longest polyAs sequence:
+```
+grep -Eo 'A+' gencode.v17.pc_transcripts.fa | awk '{print $1, length($1)}' > PolyAs.out
+sort -k 2 -n  -r PolyAs.out > SortedPolyAs.out
+head -n 10 SortedPolyAs.out
+```
+
+
 
 
 
