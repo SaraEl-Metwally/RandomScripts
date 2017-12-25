@@ -125,12 +125,13 @@ head -n 200 sorted_kmers > top_200_kmers
 #### Outputs
 The output of LightTrimmer is the set of the following files:
 
-```kmers_prob.txt [Comma delimeted file for kmers probability].
-   kmers_count.txt [Comma delimeted file for kmers count].
-   kmers_correct.txt [Comma delimeted file for kmers position and correctness (position,(0|1), 0: error, 1:correct].
-   kmers_info_all.txt [ Spaces delimited file for all information extracted from the reads.
+```
+kmers_prob.txt [Comma delimeted file for kmers probability].
+kmers_count.txt [Comma delimeted file for kmers count].
+kmers_correct.txt [Comma delimeted file for kmers position and correctness (position,(0|1), 0: error, 1:correct].
+kmers_info_all.txt [ Spaces delimited file for all information extracted from the reads.
   
-   ```
+```
  The output file `kmers_info_all.txt` has 6 columns, which are `read ID`, `Kmer ID or position in the read`, `Actual kmer count`, `Median kmer`, `Kmer probability`, `Kmer Correct(1)/Incorrect(0)`, `Probability Computed(1)/Deductive(0)` i.e. computed based on median kmer coverage.     
 ```
 R  K   C   M      P        Co  Ca
