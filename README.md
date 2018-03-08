@@ -135,18 +135,18 @@ kmers_correct.txt [Comma delimeted file for kmers position and correctness (posi
 kmers_info_all.txt [ Spaces delimited file for all information extracted from the reads.
   
 ```
- The output file `kmers_info_all.txt` has 6 columns, which are `read ID (R)`, `Kmer ID or position in the read (K)`, `Actual kmer count (C)`, `Median kmer (M)`, `Kmer probability (P)`, `Kmer Correct(1)/Incorrect(0) (Co)`, `Probability Computed(1)/Deductive(0) (Ca)` i.e. computed based on median kmer coverage.     
+ The output file `kmers_info_all.txt` has 7 columns, which are `read ID (R)`, `Kmer ID or position in the read (K)`, `Actual kmer count (C)`, `Median kmer (M)`, `Kmer probability (P)`, `Kmer Correct(1)/Incorrect(0)/N(-1) (Co)`, `Probability Computed(1)/Deductive(0) (Ca)` i.e. computed based on median kmer coverage,`Base pair Correct(1)/Incorrect(0)/N(-1) (Cbp)`.      
 ```
-R  K   C   M      P        Co  Ca
-1  0  19  45  1.0237e-05   1   1
-1  1  21  45  5.31115e-05  1   1
-1  2  19  45  1.0237e-05   1   1
-1  3  21  45  5.31115e-05  1   1
-1  4  21  45  5.31115e-05  1   1
-1  5  21  45  5.31115e-05  1   1
-1  6  21  45  5.31115e-05  1   1
-1  7  22  45  0.000112905  1   1
-1  8  22  45  0.000112905  1   1
+R  K   C   M      P        Co  Ca Cbp
+1  0  19  45  1.0237e-05   1   1  1
+1  1  21  45  5.31115e-05  1   1  1
+1  2  19  45  1.0237e-05   1   1  1
+1  3  21  45  5.31115e-05  1   1  1
+1  4  21  45  5.31115e-05  1   1  1
+1  5  21  45  5.31115e-05  1   1  1
+1  6  21  45  5.31115e-05  1   1  1
+1  7  22  45  0.000112905  1   1  1
+1  8  22  45  0.000112905  1   1  1
 
 ```
 #### Plot kmers probability for one read
@@ -180,5 +180,17 @@ dev.off()
 ```
 plot(x,y[2,],ylim=c(1,300),type="l",xlab="kmers start positions",ylab="kmers counts",main="kmers counts for one read")
 ```
-
+#### Plot correct/incorrect kmers probabilities hitogram
+1. Open R, and On R shell.
+2. For correct kmer file called `kmers_prob_C.txt` (Note: change the file paths to your LightTrimmer installation folder), write the following:
+```
+df <-read.csv("/Users/sarael-metwally/Documents/LightTrimmer/kmers_prob_C.txt",check.names=FALSE,header=FALSE)$V1
+x <- df[ df != -1 ]
+jpeg("/Users/sarael-metwally/Documents/LightTrimmer/images/correct_kmers_cutoff.jpg"); 
+y <-hist(x,main="Histogram of kmers probabilities",xlab="kmers probablities",xlim=c(0.0,1.0), prob=TRUE)
+dev.off()
+jpeg("/Users/sarael-metwally/Documents/LightTrimmer/images/correct_kmers_cutoff_1.jpg");
+plot(y$mids,y$counts,type="l",xlab="kmers probabilities",ylab="kmers probabilities counts",main="kmers probabilities histogram")
+dev.off()
+```
 
