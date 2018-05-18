@@ -184,7 +184,7 @@ plot(x,y[2,],ylim=c(1,300),type="l",xlab="kmers start positions",ylab="kmers cou
 1. Open R, and On R shell.
 2. For correct kmer file called `kmers_prob_C.txt` (Note: change the file paths to your LightTrimmer installation folder), write the following:
 ```
-df <-read.csv("/Users/sarael-metwally/Documents/LightTrimmer/kmers_prob_C.txt",check.names=FALSE,header=FALSE)$V1
+df <-unlist(read.csv("/Users/sarael-metwally/Documents/LightTrimmer/kmers_prob_C.txt",check.names=FALSE,header=FALSE))
 x <- df[ df != -1 ]
 jpeg("/Users/sarael-metwally/Documents/LightTrimmer/images/correct_kmers_cutoff.jpg"); 
 y <-hist(x,main="Histogram of kmers probabilities",xlab="kmers probablities",xlim=c(0.0,1.0), prob=TRUE)
@@ -193,4 +193,3 @@ jpeg("/Users/sarael-metwally/Documents/LightTrimmer/images/correct_kmers_cutoff_
 plot(y$mids,y$counts,type="l",xlab="kmers probabilities",ylab="kmers probabilities counts",main="kmers probabilities histogram")
 dev.off()
 ```
-
