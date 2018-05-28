@@ -2,7 +2,7 @@ def calculateDustScore (read):
     dec={}
     if(len(read)<3):
         return 0.0
-    for i in range(0,len(read)-3):
+    for i in range(0,len(read)-2):
         s=read[i:i+3]
         if s not in dec:
             dec[s]=1
