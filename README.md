@@ -193,7 +193,7 @@ jpeg("/Users/sarael-metwally/Documents/LightTrimmer/images/correct_kmers_cutoff_
 plot(y$mids,y$counts,type="l",xlab="kmers probabilities",ylab="kmers probabilities counts",main="kmers probabilities histogram")
 dev.off()
 ```
-3.You can change the scale of your plots by using the following R code: 
+3. You can change the scale of your plots by using the following R code: 
 ```
 y<-hist(x,axes=F);axis(2);axis(1,at=seq(0,1,by=0.1),labels=seq(0,1, by=0.1))
 
